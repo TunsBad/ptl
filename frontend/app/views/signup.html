@@ -1,0 +1,67 @@
+<div class="container">
+	<div class="row">
+        <div class="col-xs-12">
+               <h2><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;&nbsp; Sign Up</h2>
+               <hr>
+        </div>
+    </div>
+	<div class="row row-content">
+		<div class="col-xs-7 col-xs-offset-2">
+            <p style="padding: 20px"></p>
+            <form class="form-horizontal" role="form" name="signupForm" ng-submit="signup()" novalidate>
+
+                    <div class="form-group" ng-class="{ 'has-error has-feedback' : signupForm.emailid.$invalid && !signupForm.emailid.$pristine }">
+                        <label for="emailid" class="col-sm-2 control-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="emailid" name="emailid" placeholder="Email" ng-model="signupData.email" required>
+                            <span ng-show="signupForm.emailid.$invalid && !signupForm.emailid.$pristine" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                            <span ng-show="signupForm.emailid.$invalid && !signupForm.emailid.$pristine" class="help-block">Enter a valid email address.</span>
+                        </div>
+                    </div>
+                    <p style="padding: 5px"></p>
+
+                    <div class="form-group" ng-class="{ 'has-error' : signupForm.password.$error.required && !signupForm.password.$pristine }">
+                        <label for="password" class="col-sm-2 control-label">Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Password" ng-model="signupData.password" required>
+                            <span ng-show="signupForm.password.$error.required && !signupForm.password.$pristine" class="help-block">Password is required.</span>
+                        </div>
+                    </div>
+                    <p style="padding: 5px"></p>
+                    
+                    <div class="form-group" ng-class="{ 'has-error' : signupForm.firstname.$error.required && !signupForm.firstname.$pristine }">
+                        <label for="firstname" class="col-sm-2 control-label">First Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name" ng-model="signupData.first_name" required>
+                            <span ng-show="signupForm.firstname.$error.required && !signupForm.firstname.$pristine" class="help-block">First Name is required.</span>
+                        </div>
+                    </div>
+                    <p style="padding: 5px"></p>
+
+                    <div class="form-group" ng-class="{ 'has-error' : signupForm.lastname.$error.required && !signupForm.lastname.$pristine }">
+                        <label for="lastname" class="col-sm-2 control-label">Last Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name" ng-model="signupData.last_name" required>
+                            <span ng-show="signupForm.lastname.$error.required && !signupForm.lastname.$pristine" class="help-block">Last Name is required.</span>
+                        </div>
+                    </div>
+                    <p style="padding: 5px"></p>
+
+                    <div class="form-group" ng-class="{ 'has-error' : signupForm.phonenumber.$error.required && !signupForm.phonenumber.$pristine }">
+                        <label for="phonenumber" class="col-sm-2 control-label">Phone</label>
+                        <div class="col-sm-10">
+                            <input type="tel" class="form-control" id="phonenumber" name="phonenumber" placeholder="Phone Number" ng-model="signupData.phone_number" required>
+                            <span ng-show="signupForm.phonenumber.$error.required && !signupForm.phonenumber.$pristine" class="help-block">Phone Number field is required.</span>
+                        </div>
+                    </div>                
+                    <p style="padding: 10px"></p>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary btn-md" ng-disabled="signupForm.$invalid"><i class="fa fa-paper-plane-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Create Account&nbsp;&nbsp;</button>
+                        </div>
+                    </div>
+            </form>
+        </div>
+	</div>
+</div>

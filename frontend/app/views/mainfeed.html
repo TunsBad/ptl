@@ -1,0 +1,30 @@
+<div class="container">
+
+	<div class="row">
+        <div class="col-xs-12">
+               <h2><i class="fa fa-camera" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Picture Gallery</h2>
+
+               <hr>
+        </div>
+    </div>
+
+	<div class="row row-content">
+        <div class="col-xs-8 col-xs-offset-2">
+            
+            <div class="thumbnail" ng-repeat="picture in pictures">
+                    <a href="{{picture.image}}" target="_blank">
+                        <img src="{{picture.image}}" alt="{{picture.title}}" style="width:100%;">
+                    </a>
+                    <div>
+                        <br><br>
+                        <a type="button" class="btn btn-secondary btn-lg btn-block"><i class="fa fa-thumbs-up"></i>&nbsp;&nbsp;{{picture.num_of_comments}}&nbsp;&nbsp;Likes</a>
+                        <a type="button" class="btn btn-secondary btn-lg btn-block"><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;&nbsp;{{picture.num_of_shares}}&nbsp;&nbsp;Comments</a>
+                        <a type="button" class="btn btn-secondary btn-lg btn-block"><i class="fa fa-share-square" aria-hidden="true"></i>&nbsp;&nbsp;{{picture.num_of_likes}}&nbsp;&nbsp;Shares</a>
+                        <br><br>
+                    </div>          
+            </div>  
+         
+        </div>
+    </div>
+
+</div>
