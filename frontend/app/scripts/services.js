@@ -2,7 +2,7 @@
 
 angular.module('ptlApp')
 
-.constant("baseURL", "http://pentiumtech-api.herokuapp.com/api/v1.0/")
+.constant("baseURL", "https://pentiumtech-api.herokuapp.com/api/v1.0/")
 
 .factory('GalleryFactory', ['$resource', 'baseURL', '$http', function ($resource, baseURL, $http) {
 
